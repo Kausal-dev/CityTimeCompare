@@ -24,7 +24,7 @@
 
 ## 🚀 How to Run
 
-You can run this project locally without any complex build steps, **or you can run directly from this link - [kausaldev.me/citytimecompare](https://kausaldev.me/citytimecompare)**.
+You can run this project locally without any complex build steps, **or you can run directly from this link - [kausaldev.me/citytimecompare](https://kausaldev.me/CityTimeCompare)**.
 
 1. **Clone the repository:**
    ```bash
