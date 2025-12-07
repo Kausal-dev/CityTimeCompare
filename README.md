@@ -7,7 +7,8 @@
 - **⚡ Instant Time Comparison**: Calculate exact time differences with live clocks for thousands of global cities.
 - **🌦️ Live Weather**: Get real-time temperature and weather conditions (Clear, Rain, Snow, etc.) powered by [Open-Meteo](https://open-meteo.com/).
 - **📍 Smart Location Detect**: Automatically detects your current city and timezone using Geolocation API, with a robust IP-based fallback.
-- **🌍 Interactive Map**: Visualizes the location and distance between the two selected cities using a dynamic [Leaflet.js](https://leafletjs.com/) map.
+- **📏 Distance Calculation**: Automatically calculates the physical distance (in km) between the two selected cities.
+- **🌍 Interactive Map**: Visualizes the location and distance path between the two selected cities using a dynamic [Leaflet.js](https://leafletjs.com/) map.
 - **🌙 Dark Mode**: Fully supported dark theme that persists based on user preference.
 - **📱 Responsive & Fast**: Built with performance and mobile responsiveness in mind.
 
@@ -23,7 +24,7 @@
 
 ## 🚀 How to Run
 
-You can run this project locally without any complex build steps, **or you can run directly using this link - [kausaldev.me/citytimecompare](https://kausaldev.me/citytimecompare)**.
+You can run this project locally without any complex build steps, **or you can run directly from this link - [kausaldev.me/citytimecompare](https://kausaldev.me/citytimecompare)**.
 
 1. **Clone the repository:**
    ```bash
