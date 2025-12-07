@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CityTimeCompare - Live Time Difference & Weather Calculator</title>
+    <meta name="description"
+        content="Free tool to calculate live time difference and weather between two cities. Check world clocks, timezone offsets, and forecast instantly.">
+    <meta name="keywords"
+        content="time difference calculator, meeting planner, world clock, weather comparison, timezone converter, time in london, time in new york">
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://kausaldev.me/CityTimeCompare/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kausaldev.me/CityTimeCompare/">
+    <meta property="og:title" content="CityTimeCompare - Time & Weather Tool">
+    <meta property="og:description"
+        content="Planning a meeting? Check the live time difference and weather between any two cities instantly.">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CityTimeCompare">
+    <meta name="twitter:description" content="Calculate time differences and check weather for any city worldwide.">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "CityTimeCompare",
+      "url": "https://kausaldev.me/CityTimeCompare",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "All",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "Free tool to compare live time, date, and weather between two global locations.",
+      "featureList": "Time Difference Calculator, Live Weather, World Clock, Meeting Planner"
+    }
+    </script>
+</head>
+
+<body>
+    <header>
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Dark Mode">🌙</button>
+        <a href="index.html">
+            <img src="assets/logo.png" alt="CityTimeCompare Logo" class="app-logo">
+        </a>
+        <p>Live time difference & weather check</p>
+    </header>
+
+    <main class="container fade-in-up">
+        <section class="controls">
+            <h2 class="visually-hidden">City Selection</h2>
+            <div class="input-wrapper">
+                <label for="city1-input" class="visually-hidden">City 1</label>
+                <input type="text" id="city1-input" placeholder="Enter City 1 (e.g., London)" autocomplete="off">
+                <button id="locate-btn" title="Use my location">📍</button>
+                <ul id="suggestions-1" class="suggestions-list hidden"></ul>
+            </div>
+
+            <div class="input-wrapper">
+                <label for="city2-input" class="visually-hidden">City 2</label>
+                <input type="text" id="city2-input" placeholder="Enter City 2 (e.g., Dubai)" autocomplete="off">
+                <ul id="suggestions-2" class="suggestions-list hidden"></ul>
+            </div>
+
+            <button id="compare-btn" class="primary-btn">Compare Locations</button>
+        </section>
+
+        <section class="seo-content fade-in-up">
+            <h2>How to check Time Difference between Cities?</h2>
+            <p>Use CityTimeCompare to find the live time difference between two locations. Whether you are scheduling a
+                Zoom meeting across time zones or checking the weather for travel, our tool provides instant, accurate
+                local times and forecast data powered by Open-Meteo. Search for any city to compare clocks instantly.
+            </p>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features-grid fade-in-up">
+            <div class="feature-card">
+                <h3>⚡ Instant Comparison</h3>
+                <p>Get live time differences and current weather conditions for any two cities instantly.</p>
+            </div>
+            <div class="feature-card">
+                <h3>📍 Smart Location Detect</h3>
+                <p>Automatically find your current city and timezone with a single click using geolocation.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🌍 Interactive Map</h3>
+                <p>Visualize the distance and location of both cities on a dynamic interactive map.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🌙 Dark Mode</h3>
+                <p>Easy on the eyes with a built-in dark theme that saves your preference automatically.</p>
+            </div>
+        </section>
+
+        <!-- FAQ Section with Schema -->
+        <section id="faq" class="faq-section fade-in-up">
+            <h2>Frequently Asked Questions</h2>
+            <div itemscope itemtype="https://schema.org/FAQPage">
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <h3 itemprop="name">How accurate is the time difference calculator?</h3>
+                    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Our tool uses real-time timezone data from the Open-Meteo Geocoding API,
+                            ensuring 100% accuracy for current offsets, daylight saving adjustments, and local times.
+                        </p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <h3 itemprop="name">Is this tool free to use?</h3>
+                    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Yes, CityTimeCompare is completely free to use for personal and professional
+                            meeting planning purposes.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <h3 itemprop="name">Does it show weather forecasts?</h3>
+                    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Currently, we display the <strong>current</strong> live weather (temperature
+                            and condition). Future updates may include 7-day forecasts.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 CityTimeCompare. Data provided by Open-Meteo (Open Source).</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
