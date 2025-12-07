@@ -27,7 +27,7 @@ You can run this project locally without any complex build steps, **or you can r
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/CityTimeCompare.git
+   git clone https://github.com/Kausal-dev/CityTimeCompare.git
    cd CityTimeCompare
    ```
 
