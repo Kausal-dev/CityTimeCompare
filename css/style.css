@@ -356,6 +356,26 @@ button.primary-btn:hover {
     font-weight: 500;
 }
 
+.distance-display {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px dashed rgba(0, 0, 0, 0.1);
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+[data-theme="dark"] .distance-display {
+    border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+.distance-icon {
+    font-size: 1.1rem;
+}
+
 
 
 /* --- Map Section --- */
