@@ -220,6 +220,10 @@ async function startComparison(city1, city2) {
         // generateMeetingPlanner removed
 
 
+        // Calculate Distance
+        const distance = calculateHaversineDistance(loc1Data.latitude, loc1Data.longitude, loc2Data.latitude, loc2Data.longitude);
+        document.getElementById('distance-text').textContent = `${distance.toLocaleString()} km`;
+
         setTimeout(() => initMap(), 100);
 
         toggleLoading(false);
@@ -338,6 +342,19 @@ function calculateDifference(now) {
 
 
 
+// --- Distance Calculation ---
+function calculateHaversineDistance(lat1, lon1, lat2, lon2) {
+    const R = 6371; // Earth radius in km
+    const dLat = (lat2 - lat1) * Math.PI / 180;
+    const dLon = (lon2 - lon1) * Math.PI / 180;
+    const a =
+        Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+        Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+        Math.sin(dLon / 2) * Math.sin(dLon / 2);
+    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    return Math.round(R * c);
+}
+
 // --- Interactive Map ---
 function initMap() {
     console.log("initMap called");
@@ -395,8 +412,21 @@ function initMap() {
             marker2.bindPopup(`<b>${loc2Data.name}</b><br>${time2}`);
         } catch (e) { console.warn("Popup 2 error", e); }
 
-        // Fit bounds
-        const bounds = L.latLngBounds([lat1, lon1], [lat2, lon2]);
+        // Draw Line (Polyline)
+        const latLngs = [
+            [lat1, lon1],
+            [lat2, lon2]
+        ];
+
+        const polyline = L.polyline(latLngs, {
+            color: 'red',
+            weight: 3,
+            opacity: 0.7,
+            dashArray: '10, 10'
+        }).addTo(map);
+
+        // Fit bounds to include line
+        const bounds = polyline.getBounds();
         map.fitBounds(bounds, { padding: [50, 50] });
 
         console.log("Map initialized successfully");
